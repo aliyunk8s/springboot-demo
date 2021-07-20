@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Git代码拉取'){       
       steps{
-        git url: 'https://github.com/zbbkeepgoing/springboot-demo.git'              
+        git branch: 'master', credentialsId: 'tests',  url: 'https://github.com/zbbkeepgoing/springboot-demo.git'              
 		} 
     }   
 
